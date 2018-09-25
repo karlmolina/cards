@@ -11,6 +11,7 @@ class cards {
         for (int i = 0; i < n; i++) {
             int num = in.nextInt();
             int[] cards = new int[num];
+            //list of indexes for each card
             int[] index = new int[num + 1];
 
             for (int j = 0; j < num; j++) {
@@ -18,11 +19,12 @@ class cards {
                 cards[j] = number;
                 index[number] = j;
             }
-
+            //the smallest value of the cards
             int least = 1;
+            //the index of the top of the cards
             int head = 0;
             long points = 0;
-
+            //sum of all the cards SUM(1,2,3...n) = n*(n+1)/2
             long total = (long)num * ((long)num + 1) / 2;
 
             for (int j = 0; j < num; j++) {
